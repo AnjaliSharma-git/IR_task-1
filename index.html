@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce Landing Page</title>
+    <!-- Tailwind CSS -->
+    <link href="output.css" rel="stylesheet">
+    <style>
+        .primary-bg {
+            background-color: #802c6e;
+        }
+        .primary-text {
+            color: #802c6e;
+        }
+        .accent-bg {
+            background-color: #f7aa35;
+        }
+        .accent-text {
+            color: #f7aa35;
+        }
+        .hover-accent-bg:hover {
+            background-color: #f7aa35;
+        }
+        .hover-accent-text:hover {
+            color: #f7aa35;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navbar -->
+    <nav class="primary-bg shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">MyStore</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-white hover:accent-text hover-accent-text">Home</a>
+                <a href="#" class="text-white hover:accent-text hover-accent-text">Products</a>
+                <a href="#" class="text-white hover:accent-text hover-accent-text">Contact</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-4 pb-4 space-y-2 bg-gray-100">
+            <a href="#" class="block text-gray-700 hover:accent-text hover-accent-text">Home</a>
+            <a href="#" class="block text-gray-700 hover:accent-text hover-accent-text">Products</a>
+            <a href="#" class="block text-gray-700 hover:accent-text hover-accent-text">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="primary-bg py-6 shadow-md">
+        <div class="container mx-auto">
+            <h1 class="text-3xl text-white font-bold text-center">ECommerce Store</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6">
+        <!-- Search Bar -->
+        <div class="mb-6 flex justify-center">
+            <input type="text" id="search" placeholder="Search for products..." class="w-full max-w-lg p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+        </div>
+
+        <!-- Product Cards Container -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="product-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-full sm:max-w-md md:max-w-lg lg:max-w-2xl w-full overflow-y-auto max-h-screen">
+            <button id="modal-close" class="float-right bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Close</button>
+            <h2 id="modal-title" class="text-2xl font-bold mb-4 primary-text"></h2>
+            <img id="modal-image" class="my-4 w-full max-h-64 object-contain rounded-lg shadow-md" />
+            <p id="modal-description" class="mb-4 text-gray-700"></p>
+            <p id="modal-quantity" class="mb-4 font-semibold accent-text"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
