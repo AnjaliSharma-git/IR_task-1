@@ -1,4 +1,4 @@
-### ECommerce Landing Page
+# ECommerce Landing Page
 This is a responsive ECommerce landing page built using HTML, CSS (TailwindCSS), and JavaScript. The page fetches product data from the Fake Store API and displays the products in a card format. Users can search for products and view more details in a modal that opens when a product is clicked.
 
 ## Features
@@ -17,14 +17,14 @@ This is a responsive ECommerce landing page built using HTML, CSS (TailwindCSS),
 
 ## How It Works
 
-# Fetching Products
+### Fetching Products
 The products are fetched from the Fake Store API when the page loads. The product data includes the product image, title, price, and description.
 
-# Search Feature
+### Search Feature
 A search bar allows users to filter the displayed products. As the user types in the search bar, the products matching the search query are displayed.
 
-# Product Modal
+### Product Modal
 When a product is clicked, a modal opens displaying more details about the product, such as the description and quantity available.
 
-# Responsive Design
+### Responsive Design
 The page is built with a responsive design to ensure it looks good on both desktop and mobile devices. The layout adjusts to different screen sizes, and the product grid adapts for optimal viewing on all devices.
